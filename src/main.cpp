@@ -62,10 +62,31 @@ class Gram_map {
     }
 };
 
+class Ai {
+   public:
+    Ai(int k) : model{k}, k{k} {}
+
+    string generate(int length) {
+        string output = model.get_initial();
+
+        for (int i = 0; i <= length - k - 1; ++i) {
+            cout << output << endl;
+            output += model.next(output.substr(i, k));
+        }
+        return output;
+    }
+
+    void train(string corpus) {
+        model.make_map(corpus);
+    }
+
+   private:
+    Gram_map model;
+    int k;
+};
+
 int main() {
-    Gram_map m{2};
-    m.make_map("ababacbacbaabbacba");
-    m.str();
-    cout << m.get_initial() << endl;
-    cout << m.next("ac");
+    Ai a{3};
+    a.train("ababcbababcabacba");
+    cout << a.generate(20);
 }
