@@ -12,4 +12,4 @@ Gram_map.o: Gram_map.cpp Gram_map.h
 	g++ -c Gram_map.cpp
 
 clean:
-	rm *.o output
+	rm -f *.o program
