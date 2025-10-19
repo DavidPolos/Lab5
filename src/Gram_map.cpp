@@ -4,8 +4,6 @@
 #include <map>
 using namespace std;
 
-Gram_map::Gram_map(int k) : k{k} {}
-
 void Gram_map::add(string gram, char c) {
     gram_freq[gram].freq++;
     gram_freq[gram].trans_freq[c]++;
@@ -36,8 +34,4 @@ string Gram_map::first() {
         }
     }
     return out;
-}
-
-int Gram_map::get_k() {
-    return k;
 }

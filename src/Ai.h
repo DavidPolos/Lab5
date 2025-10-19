@@ -4,7 +4,7 @@
 
 class Ai {
    public:
-    Ai(int k) : model{k} {};
+    Ai(int k);
 
     void train(string corpus);
 
@@ -12,4 +12,5 @@ class Ai {
 
    private:
     Gram_map model;
+    int k;
 };
