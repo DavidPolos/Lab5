@@ -4,13 +4,12 @@
 
 class Ai {
    public:
-    Ai(int k);
-
-    string generate(int length);
+    Ai(int k) : model{k} {};
 
     void train(string corpus);
 
+    string generate(int length);
+
    private:
     Gram_map model;
-    int k;
 };

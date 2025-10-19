@@ -3,8 +3,6 @@
 #include <map>
 using namespace std;
 
-struct Gram_entry;
-
 class Gram_map {
    private:
     struct Gram_entry {
@@ -16,16 +14,14 @@ class Gram_map {
     int k;
     map<string, Gram_entry> gram_freq;
 
-    void condense();
-
    public:
     Gram_map(int k);
 
-    void make_map(string s);
-
-    string get_initial();
+    void add(string gram, char c);
 
     char next(string s);
 
-    void str();
+    string first();
+
+    int get_k();
 };
