@@ -19,4 +19,9 @@ The code is seperated into two classes Gram_map and Ai.
 
 Gram_map acts as the datastructure containing pairings of a k-gram, its frequency, and the the most likely character to follow it. The functionality is bare-bones but extensible. As it is it is only possible to  add an element, get the most frequent element, and get the most likely element given a k-gram. The last of which ideally would be would be replaced by some kind of iterator so that the user can perform similar actions by themselves.
 
-The Ai class uses the Gram_map. It has two methods. One that trains the model and one that generates a text given a model. 
+The Ai class uses the Gram_map. It has two methods. One that trains the model and one that generates a text given a model.
+
+## Limitations
+
+As mentioned earlier, if the text file does not contain a k-gram the Ai generates it will not be able to generate the next character.
+This could be fixed by generating a random character from the corpus or by training the Ai class on a smaller k gram for those cases.
