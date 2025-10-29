@@ -1,9 +1,6 @@
 #include <iostream>
-#include <map>
 using namespace std;
 #include <fstream>
-#include <random>
-#include <regex>
 #include <sstream>
 
 #include "Ai.h"

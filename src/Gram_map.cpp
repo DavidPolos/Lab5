@@ -1,7 +1,6 @@
 #include "Gram_map.h"
 
 #include <iostream>
-#include <map>
 using namespace std;
 
 void Gram_map::add(string gram, char c) {

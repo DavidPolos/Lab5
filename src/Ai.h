@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Gram_map.h"
 
 class Ai {
