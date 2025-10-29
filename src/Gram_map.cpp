@@ -10,6 +10,10 @@ void Gram_map::add(string gram, char c) {
 }
 
 char Gram_map::next(string s) {
+    /*Finds the character that comes after 's' by either getting it directly
+    if it has not been accessed before or searching for the most frequently
+    appearing character in trans_freq.
+    */
     if (gram_freq[s].next) {
         return gram_freq[s].next;
     }
@@ -25,6 +29,10 @@ char Gram_map::next(string s) {
 }
 
 string Gram_map::first() {
+    /*This solution is in replacement of a more thorough Gram_map implementation
+    where a user could iterate over the datastructure and find the most frequent one by
+    themselves.
+    */
     string out;
     int max = 0;
     for (auto& element : gram_freq) {
